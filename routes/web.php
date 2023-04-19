@@ -1,4 +1,6 @@
 <?php
+
+use App\Http\Controllers\ProductController;
 use App\Models\Product;
 
 use Illuminate\Support\Facades\Route;
@@ -14,16 +16,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-Route::get('/', function () {
-    return view ('products',[
-        'heading'=> 'Product Catalog',
-     'products' => Product::all()
-
-]);
-});
-Route::get('/product/{product}', function(Product $product){
+//list all products
+Route::get('/', [ProductController::class, 'index' ]);
+//show single product
+Route::get('/product/{product}',[ProductController::class, 'show' ]);
+  
+  /*  
+Route::get('/product-view/{product}', function(Product $product){
     return view('product',[
         'product' => $product
     ]);
 });
+*/
+
+//create form 
+route::get('/products/create', [ProductController::class,'create']);
+
+Route::post('/products', [ProductController::class,'store']);

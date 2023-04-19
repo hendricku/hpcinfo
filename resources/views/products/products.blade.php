@@ -26,7 +26,7 @@
 <td>{{$product->unit}}</td>
 <td>{{$product->unitPrice}}</td>
 <td>{{$product->category}}</td>
-<td><a href="/product/{{$product->id}}" type="button" class="btn btn-info">View Details</a></td>
+<td><a href="/product/{{$product->id}}" type="button" class="btn btn-outline-info">View Details</a></td>
 
 </tr>
 
@@ -35,5 +35,10 @@
 @endforeach
 
 </table>
+</div>
+<div class="row">
+    <div class="col-2">
+    <a href="/products/create" class = "btn btn-primary" >New Product Form </a>
+    </div>
 </div>
 @endsection
