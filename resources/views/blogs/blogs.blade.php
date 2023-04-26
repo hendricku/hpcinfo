@@ -11,19 +11,26 @@
 <hr style='color:black'>
 
 <div class='d-flex flex-row flex-wrap' style='padding:20px'>
-@foreach($blogs as $blog)
-<div class="card" style="width: 18rem; margin-right:10px">
-  <div class="card-body">
-    <h5 class="card-title">{{$blog['name']}}</h5>
-    <h6 class="card-subtitle mb-2 text-body-secondary">{{$blog['unit']}}</h6>
-    <p class="card-text">{{$blog['category']}}</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">''Another link''</a>
-  </div>
-</div>
 
-
-@endforeach
+@foreach($blogs as $key => $blog)
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            @if($key == 1| $key == 2)
+                                <img src="https://th.bing.com/th?id=OIP.8yXm-HsNkCLx3IDIxVJb1QHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" class="card-img-top" alt="{{ $blog->category }}">
+                            @else
+                                
+                            @endif
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $blog->name }}</h5>
+                                <p class="card-text">Unit: {{ $blog->unit }}</p>
+                                <p class="card-text">Unit Price: {{ $blog->unitPrice }}</p>
+                                <p class="card-text">Category: {{ $blog->category }}</p>
+                                <p class="card-text">image: {{ $blog->image }}</p>
+                                <a href="/blog/{{ $blog->id }}" class="btn btn-info">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
 
 </div>
 
