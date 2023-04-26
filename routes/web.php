@@ -34,3 +34,9 @@ Route::get('/Blog-view/{Blog}', function(Blog $Blog){
 route::get('/Blogs/create', [BlogController::class,'create']);
 
 Route::post('/Blogs', [BlogController::class,'store']);
+
+
+//blog.php
+//migration
+//blog.blade.php
+//blogs.blade.php

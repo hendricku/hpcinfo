@@ -9,7 +9,7 @@ class blogController extends Controller
     public function index(){
         return view ('blogs.blogs',[
             'heading'=> 'blog Catalog',
-         'blogs' => blog::paginate(5)
+         'blogs' => blog::paginate(50)
     
     ]);    
     }

@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
         Blog::create([
-            'name'=> 'Beef',
+            'name'=> 'Beeeef',
             'unit'=> 'kg',
             'unitPrice' => 380,
             'category'=> 'Fresh Meat',
