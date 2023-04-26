@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\ProductController;
-use App\Models\Product;
+use App\Http\Controllers\BlogController;
+use Illuminate\Pagination\paginate;
+use App\Models\Blog;
 
 use Illuminate\Support\Facades\Route;
 
@@ -16,20 +17,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//list all products
-Route::get('/', [ProductController::class, 'index' ]);
-//show single product
-Route::get('/product/{product}',[ProductController::class, 'show' ]);
+//list all Blogs
+Route::get('/', [BlogController::class, 'index' ]);
+//show single Blog
+Route::get('/Blog/{Blog}',[BlogController::class, 'show' ]);
   
   /*  
-Route::get('/product-view/{product}', function(Product $product){
-    return view('product',[
-        'product' => $product
+Route::get('/Blog-view/{Blog}', function(Blog $Blog){
+    return view('Blog',[
+        'Blog' => $Blog
     ]);
 });
 */
 
 //create form 
-route::get('/products/create', [ProductController::class,'create']);
+route::get('/Blogs/create', [BlogController::class,'create']);
 
-Route::post('/products', [ProductController::class,'store']);
+Route::post('/Blogs', [BlogController::class,'store']);

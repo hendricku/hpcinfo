@@ -2,16 +2,16 @@
 <table>
     <tr>
         <th>ID</th>
-        <th>Product Name</th>
+        <th>blog Name</th>
         <th>Unit Price</th>
         <th>Quantity</th>
     </tr>
-    @foreach ($products as $product):
+    @foreach ($blogs as $blog):
         <tr>
-            <td>{{ $product['id'] }}</td>
-            <td>{{ $product['product_name'] }}</td>
-            <td>{{ $product['unit_price'] }}</td>
-            <td>{{ $product['quantity'] }}</td>
+            <td>{{ $blog['id'] }}</td>
+            <td>{{ $blog['blog_name'] }}</td>
+            <td>{{ $blog['unit_price'] }}</td>
+            <td>{{ $blog['quantity'] }}</td>
         </tr>
     @endforeach
 </table>

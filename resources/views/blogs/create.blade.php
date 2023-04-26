@@ -1,6 +1,6 @@
 <x-layout>
-    <h1>New Product Form </h1>
-<form method="Post" action="/products">
+    <h1>New blog Form </h1>
+<form method="Post" action="/blogs">
     @csrf
   <div class="row mb-3">
     <label for="name" class="col-sm-2 col-form-label">Name</label>
@@ -42,6 +42,7 @@
         <option value="Vegetable">Vegetable</option>
         <option value="Meat">Meat</option>
         <option value="Fish">Fish</option>
+        <option value="Special Meal">Special Meal</option>
     </select>
     </div>
   </div>
